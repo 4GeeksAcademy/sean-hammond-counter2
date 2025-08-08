@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-// import Test from './Test.jsx'
+import Counter from "./Counter.jsx"
 
 //include images into your bundle
 import rigoImage from "../../img/rigo-baby.jpg";
@@ -19,7 +19,7 @@ const Home = () => {
   return (
     <div className="text-center">
       {seconds}
-      
+      <Counter seconds = {seconds} />
     </div>
   );
 };
