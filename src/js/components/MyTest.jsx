@@ -1,5 +1,7 @@
 import React from "react";
 
+// THIS FILE STORES MY CODE FROM Home.jsx FROM MY FIRST INCOMPLETE ATTEMPT AT THE PROJECT. IT CAN BE IGNORED.
+
 //include images into your bundle
 // import rigoImage from "../../img/rigo-baby.jpg";
 
