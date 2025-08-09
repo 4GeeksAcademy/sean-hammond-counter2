@@ -1,29 +1,23 @@
 import React, { useEffect, useState } from "react";
-import Counter from "./Counter.jsx"
-
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+import Counter from "./Counter.jsx";
 
 //create your first component
-const Home = () => {
-    const [seconds , setSeconds] = useState(0)
-    // const seconds = 0
+const Home = ({ time }) => {
+  const stringTime = time.toString();
+  console.log(stringTime + 1);
 
-  // something happens when page loads
-  useEffect(() => {
-    
-  }, []);
-
- setInterval(()=> setSeconds(seconds + 1), 1000)
+// 12 --> [0][1]
 
   return (
     <div className="text-center">
-      {seconds}
-      <Counter seconds = {seconds} />
+      <span className="digit1 border bg-secondary p-3 m-2">{stringTime[0]}</span>
+      <span className="digit2 border bg-secondary p-3 m-2">{stringTime[1]}</span>
+      <span className="digit2 border bg-secondary p-3 m-2">{stringTime[2]}</span>
+      <span className="digit2 border bg-secondary p-3 m-2">{stringTime[3]}</span>
+      <span className="digit2 border bg-secondary p-3 m-2">{stringTime[4]}</span>
+      <span className="digit2 border bg-secondary p-3 m-2">{stringTime[5]}</span>
     </div>
   );
 };
 
 export default Home;
-
-// {/* <Test propTitle={seconds} /> */}
