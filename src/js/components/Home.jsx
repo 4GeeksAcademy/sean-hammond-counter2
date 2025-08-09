@@ -1,37 +1,31 @@
 import React, { useEffect, useState } from "react";
 import Counter from "./Counter.jsx";
 
-// REMINDER: ANNOTATE HOW CODE WORKS FOR FUTURE SELF
+// ---------> REMINDER: ANNOTATE HOW CODE WORKS FOR FUTURE SELF !!!!!!!!!!!!!!!!! <---------
+
+// "Time" in my comments refers to the number of seconds since the page loaded. Not to be confused with the variable called "time", which in theory is the same thing. The "time" variable is passed in from Counter.jsx in the Components folder.
 
 //create your first component
 const Home = ({ time }) => {
-  const stringTime = time.toString();
-  console.log(stringTime + 1);
-  const digit1 = time < 10 ? stringTime[0] : stringTime[1];
-  const digit2 = time < 10 ? "0" : stringTime[0];
-
-// condition ? do this : do that;          THIS IS A TERNARY OPERATOR
-
-// 0 1 2 POSITIONS
-// ---------------
-// 0
-// 1
-// 2
-// 3
-// 4
-// 5
-// 6
-// 10
-// 13
+  const stringTime = time.toString(); // time as a string WITHOUT leading zeros
+  let stringTimeWithZeros = stringTime; // time as a string WITH leading zeros
+  let leadingZeros = 7 - stringTime.length; // how many leading zeros to display before the time if time has less than 6 digits
+  // Keeps adding leading zeros until stringTimeWithZeros has 6 digits
+  for (let i = 1; i < leadingZeros; i++) {
+    stringTimeWithZeros = "0" + stringTimeWithZeros;
+  } 
 
   return (
     <div className="text-center">
-      <span className="digit1 border bg-secondary p-3 m-2">{digit2}</span>
-      <span className="digit2 border bg-secondary p-3 m-2">{digit1}</span>
+      {/* Each digit of time displayed in a span, starting with leading zeros, such that it always has 6 digits */}
+      <span className="digit1 border bg-secondary p-3 m-2">{stringTimeWithZeros[0]}</span>
+      <span className="digit2 border bg-secondary p-3 m-2">{stringTimeWithZeros[1]}</span>
+      <span className="digit2 border bg-secondary p-3 m-2">{stringTimeWithZeros[2]}</span>
+      <span className="digit2 border bg-secondary p-3 m-2">{stringTimeWithZeros[3]}</span>
+      <span className="digit2 border bg-secondary p-3 m-2">{stringTimeWithZeros[4]}</span>
+      <span className="digit2 border bg-secondary p-3 m-2">{stringTimeWithZeros[5]}</span>
     </div>
   );
 };
 
 export default Home;
-
-//{stringTime[0]}
