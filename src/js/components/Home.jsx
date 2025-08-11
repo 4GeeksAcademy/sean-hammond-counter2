@@ -31,3 +31,4 @@ const Home = ({ time }) => {
 };
 
 export default Home;
+// Project made by Sean Hammond at 4Geeks Academy
