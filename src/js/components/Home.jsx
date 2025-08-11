@@ -26,9 +26,10 @@ const Home = ({ time }) => {
       <span className="digit2 border bg-secondary p-3 m-2">{stringTimeWithZeros[3]}</span>
       <span className="digit2 border bg-secondary p-3 m-2">{stringTimeWithZeros[4]}</span>
       <span className="digit2 border bg-secondary p-3 m-2">{stringTimeWithZeros[5]}</span>
+      <div className="text-white fixed-bottom">Made by Sean Hammond, student at 4Geeks Academy</div>
     </div>
   );
 };
 
 export default Home;
-// Project made by Sean Hammond at 4Geeks Academy
+// Project made by Sean Hammond, student at 4Geeks Academy
