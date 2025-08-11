@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Counter from "./Counter.jsx";
 
+
 // ---------> REMINDER: ANNOTATE HOW CODE WORKS FOR FUTURE SELF !!!!!!!!!!!!!!!!! <---------
 
-// "Time" in my comments refers to the number of seconds since the page loaded. Not to be confused with the variable called "time", which in theory is the same thing. The "time" variable is passed in from Counter.jsx in the Components folder.
+// "Time" IN MY COMMENTS refers to the number of seconds since the page loaded. Not to be confused with the variable called "time", which in theory is the same thing. The "time" variable is passed in from Counter.jsx in the Components folder.
 
 //create your first component
 const Home = ({ time }) => {
@@ -16,8 +17,9 @@ const Home = ({ time }) => {
   } 
 
   return (
-    <div className="text-center">
-      {/* Each digit of time displayed in a span, starting with leading zeros, such that it always has 6 digits */}
+    <div className="container text-center">
+      {/* Each digit of time displayed in a span, from left to right, starting with leading zeros, such that the entire number always has 6 digits */}
+      <span className="digit1 border bg-secondary p-3 m-2">&#128344;</span>
       <span className="digit1 border bg-secondary p-3 m-2">{stringTimeWithZeros[0]}</span>
       <span className="digit2 border bg-secondary p-3 m-2">{stringTimeWithZeros[1]}</span>
       <span className="digit2 border bg-secondary p-3 m-2">{stringTimeWithZeros[2]}</span>
